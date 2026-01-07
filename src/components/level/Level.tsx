@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { listNewHSKWordsLevel1 } from "../../store/newHSKLevel1";
 import { Link } from "react-router-dom";
 
 function Level() {
   const [listWords, setListWords] = useState(listNewHSKWordsLevel1);
+
+    useEffect(() => {
+      setListWords(listNewHSKWordsLevel1);
+    }, []);
 
   return (
     <>

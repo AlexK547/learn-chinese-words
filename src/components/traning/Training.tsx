@@ -5,7 +5,7 @@ function Training() {
   const [listWords, setListWords] = useState(listNewHSKWordsLevel1);
   const [listNumbers, setListNumbers] = useState([]);
   const [rigthAnswer, setRightAnswer] = useState(listWords[0].chinese);
-  const [listPassedWords, setListPassedWords] = useState([]);
+  // const [listPassedWords, setListPassedWords] = useState([]);
   const [count, setCount] = useState(0);
 
   const shaffle = () => {
@@ -21,10 +21,14 @@ function Training() {
       listVars[i] = listWords[newNumber].id;
     }
 
-    listVars.sort((a: any, b: any) => 0.5 - Math.random());
+    listVars.sort(() => 0.5 - Math.random());
     setListNumbers(listVars);
     console.log(listVars);
   };
+
+  useEffect(() => {
+    setListWords(listNewHSKWordsLevel1);
+  }, []);
 
   useEffect(() => {
     shaffle();

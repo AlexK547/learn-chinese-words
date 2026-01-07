@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 // import styles from "./styles.module.scss";
 import { listNewHSKWordsLevel1 } from "../../store/newHSKLevel1";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Home() {
-    const [ listWords, setListWords ] = useState(listNewHSKWordsLevel1);
+  const [listWords, setListWords] = useState(listNewHSKWordsLevel1);
 
+  useEffect(() => {
+    setListWords(listNewHSKWordsLevel1);
+  }, []);
 
   return (
     <>
