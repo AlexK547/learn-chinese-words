@@ -1,0 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    background: #f4eae1;
+}
+
+#root {
+    width: 1440px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}

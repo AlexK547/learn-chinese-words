@@ -1,0 +1,26 @@
+.level {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.level-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.level-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    p {
+        width: 50px;
+        font-size: 24px;
+    }
+}
